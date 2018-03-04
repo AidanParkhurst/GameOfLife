@@ -83,7 +83,8 @@ function updateGrid(){
             cell2.update();
         }
     }
-    updating = checkFinished();
+    if(checkFinished())
+        runButton();
 }
 
 function checkFinished(){
@@ -92,10 +93,10 @@ function checkFinished(){
         for(var iCell = 0; iCell < row.length; iCell++){
             var cell = row[iCell];
             if(cell.alive)
-                return true;
+                return false;
         }
     }
-    return false;
+    return true;
 }
 function Cell(col, row){
     this.col = col;
@@ -158,6 +159,8 @@ function Cell(col, row){
 
 function runButton(){
     updating = !updating;
+    console.log(document.getElementById("runBtn"));
+    document.getElementById("runBtn").innerText = updating ? "Stop" : "Start";
 }
 
 function clearButton(){
