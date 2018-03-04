@@ -14,9 +14,9 @@ if(!setUp)
 function setup(){
     canvas = document.querySelector('canvas');
     ctx = canvas.getContext("2d");
-    gridWidth = 15;
-    canvas.width = 900;
-    canvas.height = 900;
+    gridWidth = 25;
+    canvas.width = 700;
+    canvas.height = 700;
     gameGrid = makeGrid();
     canvas.addEventListener("click",mousePressed,false);
     drawLoop();
