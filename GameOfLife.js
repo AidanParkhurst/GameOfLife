@@ -172,7 +172,7 @@ function clearButton(){
             cell.update();
         }
     }
-    updating = false;
+    runButton();
 }
 
 setInterval(drawLoop,fps);
