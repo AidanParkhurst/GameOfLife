@@ -24,9 +24,9 @@ function setup(){
 }
 
 function mousePressed(e){
-    var canvRect = canvas.getBoundingClientRect();
-    var mouseX = e.clientX - canvRect.left;
-    var mouseY = e.clientY - canvRect.top;
+    var canvasRect = canvas.getBoundingClientRect();
+    var mouseX = e.clientX - canvasRect.left;
+    var mouseY = e.clientY - canvasRect.top;
     for(var col = 0; col < gameGrid.length; col++){
         var row = gameGrid[col];
         for(var iCell = 0; iCell < row.length; iCell++){
@@ -152,7 +152,7 @@ function Cell(col, row){
     };
 
     Cell.prototype.intersects = function(mX,mY){
-        return !(mX > this.x + gridWidth || mY > this.y + gridWidth || mX < this.x || mY < this.y)
+        return !(mX > this.x + gridWidth || mY > this.y + gridWidth || mX < this.x || mY < this.y);
     };
 }
 
