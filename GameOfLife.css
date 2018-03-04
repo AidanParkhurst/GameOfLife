@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+    background-color: darkslategray;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    /*Center horizontally*/
+    justify-content: center;
+    /*Center vertically. */
+    align-items: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background: white;
+}
+
+button {
+    display: block;
+}
